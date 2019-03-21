@@ -1,3 +1,15 @@
+""
+Run script as:
+lowrms_frags_topN.py -frag_qual frag_qual3.dat -ntop 3 -fullmer 00001.200.9mers -out 00001.3t200.9mers
+lowrms_frags_topN.py -frag_qual frag_qual9.dat -ntop 3 -fullmer 00001.200.3mers -out 00001.3t200.3mers
+
+Fragment quality input files are obtained by running the r_frag_quality app calculating the rmsd between picked fragments and the input structure.
+r_frag_quality.default.linuxgccrelease -in:file:native input.pdb -f  input.200.3mers -out:qual frag_qual3.dat
+
+Output files with the selected fragments are those used as inputs in standard Rosetta ab initio structure prediction calculations.	
+			
+""
+
 import sys
 from argparse import ArgumentParser
 
